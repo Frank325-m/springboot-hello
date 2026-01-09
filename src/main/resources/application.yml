@@ -1,0 +1,15 @@
+spring:
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn_java?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # MyBatis-Plus配置
+  mybatis-plus:
+    # 可选：如果有Mapper.xml文件才需要配置，纯注解开发可省略
+    # mapper-location: classpath:mapper/*.xml # Mapper.xml文件路径
+    type-aliases-package: com.learn.springboot_hello.entity # 实体类包路径
+    configuration:
+      map-underscore-to-camel-case: true # 下划线转驼峰
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印SQL日志
